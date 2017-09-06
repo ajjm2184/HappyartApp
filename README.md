@@ -1,2 +1,2 @@
-"# HappyartApp wiht Ionic" 
-"# Autor: Alejandro Jaramillo" 
+# HappyartApp wiht Ionic 
+Autor: Alejandro Jaramillo" 
