@@ -1,74 +1,35 @@
 <ion-content padding>
-  <ion-slides pager>
-
-    <ion-slide style="background-color: #009BDB">
-      <ion-grid class="gridCenter">
-        <ion-row justify-content-center>
-          <ion-col align-self-center>
-            <div>
-              <img style="display: block;margin-left: auto;margin-right: auto;" src="assets/img/giftbox.png" />
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-slide>
-
-    <ion-slide style="background-color: #009BDB">
-      <ion-grid class="gridCenter">
-        <ion-row justify-content-center>
-          <ion-col align-self-center>
-            <div>
-              <img style="display: block;margin-left: auto;margin-right: auto;" src="assets/img/balloon.png" />
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-slide>
-
-    <ion-slide style="background-color: #009BDB">
-      <ion-grid class="gridCenter">
-        <ion-row justify-content-center>
-          <ion-col align-self-center>
-            <div>
-              <img style="display: block;margin-left: auto;margin-right: auto;" src="assets/img/reposteria.png" />
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-slide>
-
-    <ion-slide style="background-color: #009BDB">
-      <ion-grid class="gridCenter">
-        <ion-row justify-content-center>
-          <ion-col align-self-center>
-            <div>
-              <img style="display: block;margin-left: auto;margin-right: auto;" src="assets/img/logo_ha.png" />
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div padding>
-              <button ion-button color="botones" block (click)="goLogin()">INGRESAR</button>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div padding>
-              <button ion-button color="botones" block (click)="goRegistrar()">REGISTRATE</button>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col align-self-center>
-            <div>
-              <ion-label>Bienvenido</ion-label>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-slide>
-
-  </ion-slides>
+  <ion-grid class="gridCenter">
+    <ion-row justify-content-center>
+      <ion-col align-self-center>
+        <div>
+          <img style="display: block;margin-left: auto;margin-right: auto;" src="assets/img/logo_ha.png" />
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-label text-center>BIENVENIDO</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button round color="botones" block (click)="goLogin()">INGRESAR CON CORREO</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button round color="fb" block (click)="registrarFacebook()">REGISTRATE CON FACEBOOK</button>
+      </ion-col>
+    </ion-row>    
+  </ion-grid>
+  <ion-item *ngIf="showUser">
+    <ion-avatar item-left>
+      <img [src]="user.picture.data.url" alt="">
+    </ion-avatar>
+    <h2>{{user.name}}</h2>
+    <p>{{user.email}}</p>
+  </ion-item>
 </ion-content>

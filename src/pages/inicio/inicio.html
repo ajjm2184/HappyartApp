@@ -1,0 +1,47 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>
+      INICIO
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <ion-slides pager>
+        <ion-slide>
+          <img src="https://firebasestorage.googleapis.com/v0/b/sys-happyart.appspot.com/o/slide_inicio1.jpg?alt=media&token=1216a3a5-ffb4-424f-80e4-1a29b9233a57"
+          />
+        </ion-slide>
+        <ion-slide>
+          <img src="images/slide2.png" />
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-segment [(ngModel)]="slide_inicio">
+        <ion-segment-button value="ofertas">
+          Ofertas
+        </ion-segment-button>
+        <ion-segment-button value="promo_mes">
+          Promo del Mes
+        </ion-segment-button>
+        <ion-segment-button value="nuevo">
+          Nuevo
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+    </ion-col>
+  </ion-row>
+</ion-content>
