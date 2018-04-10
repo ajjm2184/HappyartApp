@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Facebook } from '@ionic-native/facebook';
 import { InicioPage } from '../inicio/inicio';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -44,5 +45,11 @@ export class HomePage {
       .catch(error => {
         console.error(error);
       });
+  }
+
+  goLogin(){
+    this.navCtrl.insert(0, LoginPage).then(() => {
+      this.navCtrl.popToRoot();
+    });
   }
 }
