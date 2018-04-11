@@ -17,7 +17,7 @@
       <ion-col>
         <ion-item>
           <ion-label floating>Nombres</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="usuarioItem.nombres"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -25,7 +25,7 @@
       <ion-col>
         <ion-item>
           <ion-label floating>Username</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="usuarioItem.username"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -33,7 +33,7 @@
       <ion-col>
         <ion-item>
           <ion-label floating>Password</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" [(ngModel)]="usuarioItem.password"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -41,7 +41,7 @@
       <ion-col>
         <ion-item>
           <ion-label floating>Edad</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="number" [(ngModel)]="usuarioItem.edad"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -50,7 +50,7 @@
         <ion-list>
           <ion-item>
             <ion-label>Sexo</ion-label>
-            <ion-select [(ngModel)]="sexo">
+            <ion-select [(ngModel)]="usuarioItem.sexo">
               <ion-option value="H">Hombre</ion-option>
               <ion-option value="M">Mujer</ion-option>
             </ion-select>
@@ -60,7 +60,8 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <button ion-button round color="fb" block (click)="crearCuenta()">GUARDAR</button>
+        <button ion-button round color="fb" block (click)="crearCuentaUsuario(usuarioItem)">
+          <ion-icon name="add"> </ion-icon>GUARDAR</button>
       </ion-col>
     </ion-row>
   </ion-grid>

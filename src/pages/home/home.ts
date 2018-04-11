@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Facebook } from '@ionic-native/facebook';
 import { InicioPage } from '../inicio/inicio';
-import { LoginPage } from '../login/login';
+import { CrearCuentaUsuarioPage } from '../crear-cuenta-usuario/crear-cuenta-usuario';
 
 @Component({
   selector: 'page-home',
@@ -47,9 +47,7 @@ export class HomePage {
       });
   }
 
-  goLogin(){
-    this.navCtrl.insert(0, LoginPage).then(() => {
-      this.navCtrl.popToRoot();
-    });
+  goCrearCuenta() {
+    this.navCtrl.push(CrearCuentaUsuarioPage);
   }
 }
